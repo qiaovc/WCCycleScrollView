@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16D354681EC2FADF00DF9D5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D354671EC2FADF00DF9D5A /* main.m */; };
+		16D3546B1EC2FADF00DF9D5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D3546A1EC2FADF00DF9D5A /* AppDelegate.m */; };
+		16D3546E1EC2FADF00DF9D5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D3546D1EC2FADF00DF9D5A /* ViewController.m */; };
+		16D354711EC2FADF00DF9D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D3546F1EC2FADF00DF9D5A /* Main.storyboard */; };
+		16D354731EC2FADF00DF9D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D354721EC2FADF00DF9D5A /* Assets.xcassets */; };
+		16D354761EC2FADF00DF9D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D354741EC2FADF00DF9D5A /* LaunchScreen.storyboard */; };
+		16D354811EC2FADF00DF9D5A /* WCCycleScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D354801EC2FADF00DF9D5A /* WCCycleScrollViewTests.m */; };
+		16D3548C1EC2FADF00DF9D5A /* WCCycleScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D3548B1EC2FADF00DF9D5A /* WCCycleScrollViewUITests.m */; };
+		16D3549C1EC2FB4700DF9D5A /* WCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D3549B1EC2FB4700DF9D5A /* WCCollectionViewCell.m */; };
+		16D3549F1EC2FB9D00DF9D5A /* WCCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D3549E1EC2FB9D00DF9D5A /* WCCycleScrollView.m */; };
+		16D354A21EC2FBF400DF9D5A /* UIView+WCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D354A11EC2FBF400DF9D5A /* UIView+WCExtension.m */; };
+		908BDAB6958FF6BBCE48E17E /* libPods-WCCycleScrollViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD6767878532563EABD3634 /* libPods-WCCycleScrollViewUITests.a */; };
+		DBD98B0CBFF1B0F614896655 /* libPods-WCCycleScrollViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ABFE62FC96ABE835BA62C3 /* libPods-WCCycleScrollViewTests.a */; };
+		E94B02E35654E217E3D354F6 /* libPods-WCCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA977D0B5B6058FD2163F3FA /* libPods-WCCycleScrollView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16D3547D1EC2FADF00DF9D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D3545B1EC2FADF00DF9D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16D354621EC2FADF00DF9D5A;
+			remoteInfo = WCCycleScrollView;
+		};
+		16D354881EC2FADF00DF9D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D3545B1EC2FADF00DF9D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16D354621EC2FADF00DF9D5A;
+			remoteInfo = WCCycleScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16D354631EC2FADF00DF9D5A /* WCCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D354671EC2FADF00DF9D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16D354691EC2FADF00DF9D5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		16D3546A1EC2FADF00DF9D5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		16D3546C1EC2FADF00DF9D5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		16D3546D1EC2FADF00DF9D5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		16D354701EC2FADF00DF9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16D354721EC2FADF00DF9D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16D354751EC2FADF00DF9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16D354771EC2FADF00DF9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D3547C1EC2FADF00DF9D5A /* WCCycleScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCCycleScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D354801EC2FADF00DF9D5A /* WCCycleScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCycleScrollViewTests.m; sourceTree = "<group>"; };
+		16D354821EC2FADF00DF9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D354871EC2FADF00DF9D5A /* WCCycleScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCCycleScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D3548B1EC2FADF00DF9D5A /* WCCycleScrollViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCycleScrollViewUITests.m; sourceTree = "<group>"; };
+		16D3548D1EC2FADF00DF9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D3549A1EC2FB4700DF9D5A /* WCCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCollectionViewCell.h; sourceTree = "<group>"; };
+		16D3549B1EC2FB4700DF9D5A /* WCCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCollectionViewCell.m; sourceTree = "<group>"; };
+		16D3549D1EC2FB9D00DF9D5A /* WCCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCCycleScrollView.h; sourceTree = "<group>"; };
+		16D3549E1EC2FB9D00DF9D5A /* WCCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCCycleScrollView.m; sourceTree = "<group>"; };
+		16D354A01EC2FBF400DF9D5A /* UIView+WCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WCExtension.h"; sourceTree = "<group>"; };
+		16D354A11EC2FBF400DF9D5A /* UIView+WCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WCExtension.m"; sourceTree = "<group>"; };
+		3A81A72DCA76A720F6803107 /* Pods-WCCycleScrollViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollViewTests/Pods-WCCycleScrollViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CDB2AAD597D6E47536DA8D9 /* Pods-WCCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollView/Pods-WCCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		43ABFE62FC96ABE835BA62C3 /* libPods-WCCycleScrollViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCCycleScrollViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C5558D25DBE158EBF25AAA /* Pods-WCCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollView/Pods-WCCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		98B14B7F9EF2B243239A715A /* Pods-WCCycleScrollViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollViewUITests/Pods-WCCycleScrollViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6C305E9754CE1754B997E9A /* Pods-WCCycleScrollViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollViewUITests/Pods-WCCycleScrollViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDD6767878532563EABD3634 /* libPods-WCCycleScrollViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCCycleScrollViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA977D0B5B6058FD2163F3FA /* libPods-WCCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8565313B162C3B2642924CA /* Pods-WCCycleScrollViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCCycleScrollViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCCycleScrollViewTests/Pods-WCCycleScrollViewTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D354601EC2FADF00DF9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94B02E35654E217E3D354F6 /* libPods-WCCycleScrollView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D354791EC2FADF00DF9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD98B0CBFF1B0F614896655 /* libPods-WCCycleScrollViewTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D354841EC2FADF00DF9D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908BDAB6958FF6BBCE48E17E /* libPods-WCCycleScrollViewUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16D3545A1EC2FADF00DF9D5A = {
+			isa = PBXGroup;
+			children = (
+				16D354651EC2FADF00DF9D5A /* WCCycleScrollView */,
+				16D3547F1EC2FADF00DF9D5A /* WCCycleScrollViewTests */,
+				16D3548A1EC2FADF00DF9D5A /* WCCycleScrollViewUITests */,
+				16D354641EC2FADF00DF9D5A /* Products */,
+				2C543BDAF3A90C1AD1DACA4E /* Pods */,
+				698835621F3B646E01371E44 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		16D354641EC2FADF00DF9D5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16D354631EC2FADF00DF9D5A /* WCCycleScrollView.app */,
+				16D3547C1EC2FADF00DF9D5A /* WCCycleScrollViewTests.xctest */,
+				16D354871EC2FADF00DF9D5A /* WCCycleScrollViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16D354651EC2FADF00DF9D5A /* WCCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				16D354991EC2FB0D00DF9D5A /* WCCycleScrollView */,
+				16D354691EC2FADF00DF9D5A /* AppDelegate.h */,
+				16D3546A1EC2FADF00DF9D5A /* AppDelegate.m */,
+				16D3546C1EC2FADF00DF9D5A /* ViewController.h */,
+				16D3546D1EC2FADF00DF9D5A /* ViewController.m */,
+				16D3546F1EC2FADF00DF9D5A /* Main.storyboard */,
+				16D354721EC2FADF00DF9D5A /* Assets.xcassets */,
+				16D354741EC2FADF00DF9D5A /* LaunchScreen.storyboard */,
+				16D354771EC2FADF00DF9D5A /* Info.plist */,
+				16D354661EC2FADF00DF9D5A /* Supporting Files */,
+			);
+			path = WCCycleScrollView;
+			sourceTree = "<group>";
+		};
+		16D354661EC2FADF00DF9D5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16D354671EC2FADF00DF9D5A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16D3547F1EC2FADF00DF9D5A /* WCCycleScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				16D354801EC2FADF00DF9D5A /* WCCycleScrollViewTests.m */,
+				16D354821EC2FADF00DF9D5A /* Info.plist */,
+			);
+			path = WCCycleScrollViewTests;
+			sourceTree = "<group>";
+		};
+		16D3548A1EC2FADF00DF9D5A /* WCCycleScrollViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16D3548B1EC2FADF00DF9D5A /* WCCycleScrollViewUITests.m */,
+				16D3548D1EC2FADF00DF9D5A /* Info.plist */,
+			);
+			path = WCCycleScrollViewUITests;
+			sourceTree = "<group>";
+		};
+		16D354991EC2FB0D00DF9D5A /* WCCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				16D3549A1EC2FB4700DF9D5A /* WCCollectionViewCell.h */,
+				16D3549B1EC2FB4700DF9D5A /* WCCollectionViewCell.m */,
+				16D3549D1EC2FB9D00DF9D5A /* WCCycleScrollView.h */,
+				16D3549E1EC2FB9D00DF9D5A /* WCCycleScrollView.m */,
+				16D354A01EC2FBF400DF9D5A /* UIView+WCExtension.h */,
+				16D354A11EC2FBF400DF9D5A /* UIView+WCExtension.m */,
+			);
+			path = WCCycleScrollView;
+			sourceTree = "<group>";
+		};
+		2C543BDAF3A90C1AD1DACA4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68C5558D25DBE158EBF25AAA /* Pods-WCCycleScrollView.debug.xcconfig */,
+				3CDB2AAD597D6E47536DA8D9 /* Pods-WCCycleScrollView.release.xcconfig */,
+				3A81A72DCA76A720F6803107 /* Pods-WCCycleScrollViewTests.debug.xcconfig */,
+				F8565313B162C3B2642924CA /* Pods-WCCycleScrollViewTests.release.xcconfig */,
+				A6C305E9754CE1754B997E9A /* Pods-WCCycleScrollViewUITests.debug.xcconfig */,
+				98B14B7F9EF2B243239A715A /* Pods-WCCycleScrollViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		698835621F3B646E01371E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA977D0B5B6058FD2163F3FA /* libPods-WCCycleScrollView.a */,
+				43ABFE62FC96ABE835BA62C3 /* libPods-WCCycleScrollViewTests.a */,
+				CDD6767878532563EABD3634 /* libPods-WCCycleScrollViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16D354621EC2FADF00DF9D5A /* WCCycleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D354901EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollView" */;
+			buildPhases = (
+				DBF5A55679EB81AD839A15D9 /* [CP] Check Pods Manifest.lock */,
+				16D3545F1EC2FADF00DF9D5A /* Sources */,
+				16D354601EC2FADF00DF9D5A /* Frameworks */,
+				16D354611EC2FADF00DF9D5A /* Resources */,
+				27EFCBD2BC7931D5B908DBDC /* [CP] Embed Pods Frameworks */,
+				85FE54C414F79D39ECEA455B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCCycleScrollView;
+			productName = WCCycleScrollView;
+			productReference = 16D354631EC2FADF00DF9D5A /* WCCycleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16D3547B1EC2FADF00DF9D5A /* WCCycleScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D354931EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewTests" */;
+			buildPhases = (
+				E2370CCC3BA350619EC0534D /* [CP] Check Pods Manifest.lock */,
+				16D354781EC2FADF00DF9D5A /* Sources */,
+				16D354791EC2FADF00DF9D5A /* Frameworks */,
+				16D3547A1EC2FADF00DF9D5A /* Resources */,
+				C67DBF096F4285E5331CAA16 /* [CP] Embed Pods Frameworks */,
+				8033BBA15BFB1DBCD5CF7B41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16D3547E1EC2FADF00DF9D5A /* PBXTargetDependency */,
+			);
+			name = WCCycleScrollViewTests;
+			productName = WCCycleScrollViewTests;
+			productReference = 16D3547C1EC2FADF00DF9D5A /* WCCycleScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16D354861EC2FADF00DF9D5A /* WCCycleScrollViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D354961EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewUITests" */;
+			buildPhases = (
+				ABA24C68972333221B65B67F /* [CP] Check Pods Manifest.lock */,
+				16D354831EC2FADF00DF9D5A /* Sources */,
+				16D354841EC2FADF00DF9D5A /* Frameworks */,
+				16D354851EC2FADF00DF9D5A /* Resources */,
+				252879223A9D440782228CFD /* [CP] Embed Pods Frameworks */,
+				2FEC7F12F1FFC7415ABB0666 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16D354891EC2FADF00DF9D5A /* PBXTargetDependency */,
+			);
+			name = WCCycleScrollViewUITests;
+			productName = WCCycleScrollViewUITests;
+			productReference = 16D354871EC2FADF00DF9D5A /* WCCycleScrollViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16D3545B1EC2FADF00DF9D5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "乔伟成";
+				TargetAttributes = {
+					16D354621EC2FADF00DF9D5A = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = ZY88EWA94M;
+						ProvisioningStyle = Automatic;
+					};
+					16D3547B1EC2FADF00DF9D5A = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = ZY88EWA94M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 16D354621EC2FADF00DF9D5A;
+					};
+					16D354861EC2FADF00DF9D5A = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = ZY88EWA94M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 16D354621EC2FADF00DF9D5A;
+					};
+				};
+			};
+			buildConfigurationList = 16D3545E1EC2FADF00DF9D5A /* Build configuration list for PBXProject "WCCycleScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16D3545A1EC2FADF00DF9D5A;
+			productRefGroup = 16D354641EC2FADF00DF9D5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16D354621EC2FADF00DF9D5A /* WCCycleScrollView */,
+				16D3547B1EC2FADF00DF9D5A /* WCCycleScrollViewTests */,
+				16D354861EC2FADF00DF9D5A /* WCCycleScrollViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16D354611EC2FADF00DF9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D354761EC2FADF00DF9D5A /* LaunchScreen.storyboard in Resources */,
+				16D354731EC2FADF00DF9D5A /* Assets.xcassets in Resources */,
+				16D354711EC2FADF00DF9D5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D3547A1EC2FADF00DF9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D354851EC2FADF00DF9D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		252879223A9D440782228CFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollViewUITests/Pods-WCCycleScrollViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27EFCBD2BC7931D5B908DBDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollView/Pods-WCCycleScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FEC7F12F1FFC7415ABB0666 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollViewUITests/Pods-WCCycleScrollViewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8033BBA15BFB1DBCD5CF7B41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollViewTests/Pods-WCCycleScrollViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85FE54C414F79D39ECEA455B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollView/Pods-WCCycleScrollView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABA24C68972333221B65B67F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C67DBF096F4285E5331CAA16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCCycleScrollViewTests/Pods-WCCycleScrollViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF5A55679EB81AD839A15D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2370CCC3BA350619EC0534D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16D3545F1EC2FADF00DF9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D3546E1EC2FADF00DF9D5A /* ViewController.m in Sources */,
+				16D3546B1EC2FADF00DF9D5A /* AppDelegate.m in Sources */,
+				16D3549F1EC2FB9D00DF9D5A /* WCCycleScrollView.m in Sources */,
+				16D3549C1EC2FB4700DF9D5A /* WCCollectionViewCell.m in Sources */,
+				16D354A21EC2FBF400DF9D5A /* UIView+WCExtension.m in Sources */,
+				16D354681EC2FADF00DF9D5A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D354781EC2FADF00DF9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D354811EC2FADF00DF9D5A /* WCCycleScrollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D354831EC2FADF00DF9D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D3548C1EC2FADF00DF9D5A /* WCCycleScrollViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16D3547E1EC2FADF00DF9D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16D354621EC2FADF00DF9D5A /* WCCycleScrollView */;
+			targetProxy = 16D3547D1EC2FADF00DF9D5A /* PBXContainerItemProxy */;
+		};
+		16D354891EC2FADF00DF9D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16D354621EC2FADF00DF9D5A /* WCCycleScrollView */;
+			targetProxy = 16D354881EC2FADF00DF9D5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16D3546F1EC2FADF00DF9D5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D354701EC2FADF00DF9D5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16D354741EC2FADF00DF9D5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D354751EC2FADF00DF9D5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16D3548E1EC2FADF00DF9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16D3548F1EC2FADF00DF9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16D354911EC2FADF00DF9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C5558D25DBE158EBF25AAA /* Pods-WCCycleScrollView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16D354921EC2FADF00DF9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CDB2AAD597D6E47536DA8D9 /* Pods-WCCycleScrollView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16D354941EC2FADF00DF9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A81A72DCA76A720F6803107 /* Pods-WCCycleScrollViewTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WCCycleScrollView.app/WCCycleScrollView";
+			};
+			name = Debug;
+		};
+		16D354951EC2FADF00DF9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8565313B162C3B2642924CA /* Pods-WCCycleScrollViewTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WCCycleScrollView.app/WCCycleScrollView";
+			};
+			name = Release;
+		};
+		16D354971EC2FADF00DF9D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C305E9754CE1754B997E9A /* Pods-WCCycleScrollViewUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WCCycleScrollView;
+			};
+			name = Debug;
+		};
+		16D354981EC2FADF00DF9D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B14B7F9EF2B243239A715A /* Pods-WCCycleScrollViewUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZY88EWA94M;
+				INFOPLIST_FILE = WCCycleScrollViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WCCycleScrollViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WCCycleScrollView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16D3545E1EC2FADF00DF9D5A /* Build configuration list for PBXProject "WCCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D3548E1EC2FADF00DF9D5A /* Debug */,
+				16D3548F1EC2FADF00DF9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D354901EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D354911EC2FADF00DF9D5A /* Debug */,
+				16D354921EC2FADF00DF9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16D354931EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D354941EC2FADF00DF9D5A /* Debug */,
+				16D354951EC2FADF00DF9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16D354961EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D354971EC2FADF00DF9D5A /* Debug */,
+				16D354981EC2FADF00DF9D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16D3545B1EC2FADF00DF9D5A /* Project object */;
+}
