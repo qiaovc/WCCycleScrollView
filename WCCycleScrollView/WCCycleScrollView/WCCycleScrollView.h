@@ -49,4 +49,12 @@
 @property (nonatomic, strong) NSArray *titleGroup;
 
 @property(nonatomic, assign) id<WCCycleScrollViewDelegate> delegate;
+
+
+////////////////////////   自定义样式 ///////////////////////////////
+@property(nonatomic, strong) UIColor            *titleLabelTextColor;
+@property(nonatomic, strong) UIFont             *titleLabelTextFont;
+@property(nonatomic, strong) UIColor            *titleLabelBackgroundColor;
+@property(nonatomic, assign) NSTextAlignment    titleLabelTextAlignment;
+@property(nonatomic, assign) CGFloat            titleLabelHeight;
 @end

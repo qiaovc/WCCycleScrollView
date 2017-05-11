@@ -31,7 +31,11 @@
 
 - (void)initialization
 {
-    
+    _titleLabelTextAlignment = NSTextAlignmentLeft;
+    _titleLabelBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    _titleLabelTextColor = [UIColor whiteColor];
+    _titleLabelTextFont = [UIFont systemFontOfSize:14];
+    _titleLabelHeight = 30;
 }
 
 - (void)setupMainView
@@ -68,6 +72,12 @@
     NSString *imagePath = self.imageURLStringGroup[index];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@""]];
     cell.title = self.titleGroup[index];
+    
+    cell.titleLabelTextAlignment = self.titleLabelTextAlignment;
+    cell.titleLabelTextColor = self.titleLabelTextColor;
+    cell.titleLabelTextFont = self.titleLabelTextFont;
+    cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor;
+    cell.titleLabelHeight = self.titleLabelHeight;
     return cell;
 }
 - (int)pageControlIndexWithCurrentCellIndex:(NSInteger)index

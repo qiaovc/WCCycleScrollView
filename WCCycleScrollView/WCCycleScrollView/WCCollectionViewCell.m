@@ -23,6 +23,23 @@
     return self;
 }
 
+- (void)setTitleLabelTextFont:(UIFont *)titleLabelTextFont
+{
+    _titleLabelTextFont = titleLabelTextFont;
+    _titleLabel.font = titleLabelTextFont;
+}
+
+- (void)setTitleLabelTextColor:(UIColor *)titleLabelTextColor
+{
+    _titleLabelTextColor = titleLabelTextColor;
+    _titleLabel.textColor = titleLabelTextColor;
+}
+
+- (void)setTitleLabelBackgroundColor:(UIColor *)titleLabelBackgroundColor
+{
+    _titleLabelBackgroundColor = titleLabelBackgroundColor;
+    _titleLabel.backgroundColor = titleLabelBackgroundColor;
+}
 - (void)setupImageView
 {
     UIImageView *imageView = [[UIImageView alloc] init];
@@ -40,17 +57,24 @@
 - (void)setTitle:(NSString *)title
 {
     _title = title;
-    _titleLabel.text = [NSString stringWithFormat:@"%@",title];
+    _titleLabel.text = [NSString stringWithFormat:@"    %@",title];
 }
 
+- (void)setTitleLabelTextAlignment:(NSTextAlignment)titleLabelTextAlignment
+{
+    _titleLabelTextAlignment = titleLabelTextAlignment;
+    _titleLabel.textAlignment = titleLabelTextAlignment;
+}
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     _imageView.frame = self.bounds;
     CGFloat titleLabelW = self.wc_width;
-    CGFloat titleLabelH = 20;
+    CGFloat titleLabelH = self.titleLabelHeight;
     CGFloat titleLabelX = 0;
     CGFloat titleLabelY = self.wc_height - titleLabelH;
     _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
 }
+
+
 @end
