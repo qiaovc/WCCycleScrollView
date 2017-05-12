@@ -42,16 +42,26 @@
 /**
  网络图片 url string 数组
  */
-@property (nonatomic, strong) NSArray *imageURLStringGroup;
+@property(nonatomic, strong) NSArray *imageURLStringGroup;
 /**
  每张图片对应要显示的文字数组
  */
-@property (nonatomic, strong) NSArray *titleGroup;
+@property(nonatomic, strong) NSArray *titleGroup;
 
 @property(nonatomic, assign) id<WCCycleScrollViewDelegate> delegate;
 
+/**
+ 自动滚动时间间隔 默认2秒
+ */
+@property(nonatomic, assign) CGFloat autoScrollTimeInterval;
+
 
 ////////////////////////   自定义样式 ///////////////////////////////
+
+/**
+ 占位图
+ */
+@property(nonatomic, strong) UIImage            *placeholderImage;
 @property(nonatomic, strong) UIColor            *titleLabelTextColor;
 @property(nonatomic, strong) UIFont             *titleLabelTextFont;
 @property(nonatomic, strong) UIColor            *titleLabelBackgroundColor;

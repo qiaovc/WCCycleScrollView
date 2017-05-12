@@ -36,6 +36,7 @@
     _titleLabelTextColor = [UIColor whiteColor];
     _titleLabelTextFont = [UIFont systemFontOfSize:14];
     _titleLabelHeight = 30;
+    _autoScrollTimeInterval = 2.0;
 }
 
 - (void)setupMainView
@@ -59,6 +60,7 @@
 {
     WCCycleScrollView *cycleScrollView = [[WCCycleScrollView alloc] initWithFrame:frame];
     cycleScrollView.delegate = delegate;
+    cycleScrollView.placeholderImage = placeholderImage;
     return cycleScrollView;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -70,7 +72,7 @@
     WCCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WCCollectionViewCell" forIndexPath:indexPath];
     NSInteger index = [self pageControlIndexWithCurrentCellIndex:indexPath.item];
     NSString *imagePath = self.imageURLStringGroup[index];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@""]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
     cell.title = self.titleGroup[index];
     
     cell.titleLabelTextAlignment = self.titleLabelTextAlignment;
@@ -100,9 +102,10 @@
     [self invalidateTimer];
     [self setupTimer];
 }
+
 - (void)setupTimer
 {
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.autoScrollTimeInterval target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
     _timer = timer;
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
