@@ -12,10 +12,11 @@
 #import "UIView+WCExtension.h"
 @interface WCCycleScrollView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property(nonatomic, weak) UICollectionView *mainView;
-@property(nonatomic, weak) UIPageControl *pageControl;
-@property(nonatomic, weak) NSTimer *timer;
-@property(nonatomic, assign) NSInteger totalItemCount;
+@property(nonatomic, weak) UICollectionView     *mainView;
+@property(nonatomic, weak) UIPageControl        *pageControl;
+@property(nonatomic, weak) NSTimer              *timer;
+@property(nonatomic, assign) NSInteger          totalItemCount;
+
 @end
 
 @implementation WCCycleScrollView
@@ -56,6 +57,90 @@
     [self addSubview:mainView];
     _mainView = mainView;
 }
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    if (_mainView.contentOffset.x == 0 && _totalItemCount) {
+        int targetIndex = _totalItemCount*0.5;
+        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    }
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    if (!newSuperview) {
+        [self invalidateTimer];
+    }
+}
+
+-(void)dealloc
+{
+    _mainView.delegate = nil;
+    _mainView.dataSource = nil;
+}
+//MARK: - 属性
+- (void)setImageURLStringGroup:(NSArray *)imageURLStringGroup
+{
+    _imageURLStringGroup = imageURLStringGroup;
+    _totalItemCount = imageURLStringGroup.count * 100;
+    [self invalidateTimer];
+    [self setupTimer];
+}
+
+//MARK: - 自定义方法
+- (void)setupTimer
+{
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.autoScrollTimeInterval target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
+    _timer = timer;
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)invalidateTimer
+{
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void)automaticScroll
+{
+    int currentIndex = [self currentIndex];
+    int targetIndex = currentIndex + 1;
+    [self scrollToIndex:targetIndex];
+}
+
+- (void)scrollToIndex:(int)targetIndex
+{
+    if (targetIndex >= _totalItemCount) {
+        targetIndex = _totalItemCount * 0.5;
+        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        return;
+    }
+    [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+    
+}
+
+/**
+ 获取当前collection view显示的下标
+
+ @return 下标值
+ */
+- (int)currentIndex
+{
+    return (int)(_mainView.contentOffset.x / self.wc_width);
+}
+/**
+ 获取pagecontrol要显示的下标
+
+ @param index collectionview当前显示的下标
+ @return pagecontrol要显示的下标
+ */
+- (int)pageControlIndexWithCurrentCellIndex:(NSInteger)index
+{
+    return (int)index % self.imageURLStringGroup.count;
+}
+
+//MARK: - collectionview 数据源代理方法
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<WCCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage
 {
     WCCycleScrollView *cycleScrollView = [[WCCycleScrollView alloc] initWithFrame:frame];
@@ -82,64 +167,14 @@
     cell.titleLabelHeight = self.titleLabelHeight;
     return cell;
 }
-- (int)pageControlIndexWithCurrentCellIndex:(NSInteger)index
-{
-    return (int)index % self.imageURLStringGroup.count;
-}
 
-- (void)layoutSubviews
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super layoutSubviews];
-    if (_mainView.contentOffset.x == 0 && _totalItemCount) {
-        int targetIndex = _totalItemCount*0.5;
-        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:didSelectItemAtIndex:)]) {
+        [self.delegate cycleScrollView:self didSelectItemAtIndex:[self pageControlIndexWithCurrentCellIndex:indexPath.item]];
     }
 }
-- (void)setImageURLStringGroup:(NSArray *)imageURLStringGroup
-{
-    _imageURLStringGroup = imageURLStringGroup;
-    _totalItemCount = imageURLStringGroup.count * 100;
-    [self invalidateTimer];
-    [self setupTimer];
-}
-
-- (void)setupTimer
-{
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.autoScrollTimeInterval target:self selector:@selector(automaticScroll) userInfo:nil repeats:YES];
-    _timer = timer;
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-}
-- (void)invalidateTimer
-{
-    [_timer invalidate];
-    _timer = nil;
-}
-- (void)willMoveToSuperview:(UIView *)newSuperview
-{
-    if (!newSuperview) {
-        [self invalidateTimer];
-    }
-}
-- (void)automaticScroll
-{
-    int currentIndex = [self currentIndex];
-    int targetIndex = currentIndex + 1;
-    [self scrollToIndex:targetIndex];
-}
-- (void)scrollToIndex:(int)targetIndex
-{
-    if (targetIndex >= _totalItemCount) {
-        targetIndex = _totalItemCount * 0.5;
-        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-        return;
-    }
-    [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-    
-}
-- (int)currentIndex
-{
-    return (int)(_mainView.contentOffset.x / self.wc_width);
-}
+//MARK: - scrollview代理方法
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self invalidateTimer];

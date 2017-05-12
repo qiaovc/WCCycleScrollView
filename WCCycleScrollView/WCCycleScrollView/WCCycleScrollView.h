@@ -38,7 +38,6 @@
                                 delegate:(id<WCCycleScrollViewDelegate>)delegate
                         placeholderImage:(UIImage*)placeholderImage;
 
-
 /**
  网络图片 url string 数组
  */
