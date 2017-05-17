@@ -189,14 +189,18 @@
     NSInteger index = [self pageControlIndexWithCurrentCellIndex:indexPath.item];
     NSString *imagePath = self.imageURLStringGroup[index];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:self.placeholderImage];
-    cell.title = self.titleGroup[index];
-    
-    cell.titleLabelTextAlignment = self.titleLabelTextAlignment;
-    cell.titleLabelTextColor = self.titleLabelTextColor;
-    cell.titleLabelTextFont = self.titleLabelTextFont;
-    cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor;
-    cell.titleLabelHeight = self.titleLabelHeight;
-    cell.clipsToBounds = YES;
+    if (self.titleGroup.count && index < self.titleGroup.count) {
+        cell.title = self.titleGroup[index];
+    }
+    if (!cell.hasConfig) {
+        cell.hasConfig = YES;
+        cell.titleLabelTextAlignment = self.titleLabelTextAlignment;
+        cell.titleLabelTextColor = self.titleLabelTextColor;
+        cell.titleLabelTextFont = self.titleLabelTextFont;
+        cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor;
+        cell.titleLabelHeight = self.titleLabelHeight;
+        cell.clipsToBounds = YES;
+    }
     return cell;
 }
 
