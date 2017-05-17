@@ -16,7 +16,7 @@
 @property(nonatomic, weak) UIPageControl        *pageControl;
 @property(nonatomic, weak) NSTimer              *timer;
 @property(nonatomic, assign) NSInteger          totalItemCount;
-
+@property(nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
 @end
 
 @implementation WCCycleScrollView
@@ -37,17 +37,19 @@
     _titleLabelTextColor = [UIColor whiteColor];
     _titleLabelTextFont = [UIFont systemFontOfSize:14];
     _titleLabelHeight = 30;
-    _autoScrollTimeInterval = 2.0;
+    _autoScrollTimeInterval = 3.0;
+    
 }
 
 - (void)setupMainView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 0;
-    flowLayout.itemSize = self.frame.size;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    _flowLayout = flowLayout;
     
     UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
+    mainView.backgroundColor = [UIColor grayColor];
     mainView.pagingEnabled = YES;
     mainView.showsVerticalScrollIndicator = NO;
     mainView.showsHorizontalScrollIndicator = NO;
@@ -58,9 +60,19 @@
     _mainView = mainView;
 }
 
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<WCCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage
+{
+    WCCycleScrollView *cycleScrollView = [[WCCycleScrollView alloc] initWithFrame:frame];
+    cycleScrollView.delegate = delegate;
+    cycleScrollView.placeholderImage = placeholderImage;
+    return cycleScrollView;
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    _flowLayout.itemSize = self.frame.size;
+    _mainView.frame = self.bounds;
     if (_mainView.contentOffset.x == 0 && _totalItemCount) {
         int targetIndex = _totalItemCount*0.5;
         [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
@@ -84,6 +96,7 @@
 {
     _imageURLStringGroup = imageURLStringGroup;
     _totalItemCount = imageURLStringGroup.count * 100;
+    [self setupPageControl];
     [self invalidateTimer];
     [self setupTimer];
 }
@@ -100,6 +113,21 @@
 {
     [_timer invalidate];
     _timer = nil;
+}
+
+- (void)setupPageControl
+{
+    if (_pageControl) {
+        [_pageControl removeFromSuperview];
+    }
+    if (self.imageURLStringGroup.count == 0) return;
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    pageControl.numberOfPages = self.imageURLStringGroup.count;
+    pageControl.hidesForSinglePage = YES;
+    [self addSubview:pageControl];
+    _pageControl = pageControl;
+    
 }
 
 - (void)automaticScroll
@@ -141,13 +169,7 @@
 }
 
 //MARK: - collectionview 数据源代理方法
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<WCCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage
-{
-    WCCycleScrollView *cycleScrollView = [[WCCycleScrollView alloc] initWithFrame:frame];
-    cycleScrollView.delegate = delegate;
-    cycleScrollView.placeholderImage = placeholderImage;
-    return cycleScrollView;
-}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return _totalItemCount;
@@ -165,6 +187,7 @@
     cell.titleLabelTextFont = self.titleLabelTextFont;
     cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor;
     cell.titleLabelHeight = self.titleLabelHeight;
+    cell.clipsToBounds = YES;
     return cell;
 }
 
