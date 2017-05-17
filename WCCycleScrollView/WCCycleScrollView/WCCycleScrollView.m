@@ -110,6 +110,17 @@
     [self setupTimer];
 }
 
+- (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor
+{
+    _pageIndicatorTintColor = pageIndicatorTintColor;
+    _pageControl.pageIndicatorTintColor = pageIndicatorTintColor;
+}
+
+- (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor
+{
+    _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+    _pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+}
 //MARK: - 自定义方法
 - (void)setupTimer
 {
@@ -134,6 +145,8 @@
     UIPageControl *pageControl = [[UIPageControl alloc] init];
     pageControl.numberOfPages = self.imageURLStringGroup.count;
     pageControl.hidesForSinglePage = YES;
+    pageControl.currentPageIndicatorTintColor = self.currentPageIndicatorTintColor;
+    pageControl.pageIndicatorTintColor = self.pageIndicatorTintColor;
     [self addSubview:pageControl];
     _pageControl = pageControl;
     

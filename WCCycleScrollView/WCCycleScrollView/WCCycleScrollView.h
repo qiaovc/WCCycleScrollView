@@ -66,4 +66,12 @@
 @property(nonatomic, strong) UIColor            *titleLabelBackgroundColor;
 @property(nonatomic, assign) NSTextAlignment    titleLabelTextAlignment;
 @property(nonatomic, assign) CGFloat            titleLabelHeight;
+/**
+ 当前分页指示器颜色
+ */
+@property(nonatomic, strong) UIColor *currentPageIndicatorTintColor;
+/**
+ 分页指示器颜色
+ */
+@property(nonatomic, strong) UIColor *pageIndicatorTintColor;
 @end
