@@ -77,6 +77,12 @@
         int targetIndex = _totalItemCount*0.5;
         [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
+    CGFloat width = [self.pageControl sizeForNumberOfPages:self.imageURLStringGroup.count].width;
+    CGFloat height = 10.0;
+    CGFloat x = self.mainView.frame.size.width - width - 10;
+    CGFloat y = self.mainView.frame.size.height - height - 10;
+    self.pageControl.frame = CGRectMake(x, y, width, 10);
+    
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -96,6 +102,9 @@
 {
     _imageURLStringGroup = imageURLStringGroup;
     _totalItemCount = imageURLStringGroup.count * 100;
+    if (imageURLStringGroup.count == 1) {
+        self.mainView.scrollEnabled = NO;
+    }
     [self setupPageControl];
     [self invalidateTimer];
     [self setupTimer];
@@ -155,7 +164,7 @@
  */
 - (int)currentIndex
 {
-    return (int)(_mainView.contentOffset.x / self.wc_width);
+    return (int)((_mainView.contentOffset.x + _flowLayout.itemSize.width * 0.5) / _flowLayout.itemSize.width);
 }
 /**
  获取pagecontrol要显示的下标
@@ -205,5 +214,11 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self setupTimer];
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    int collectionViewItemIndex = [self currentIndex];
+    int pageControlCurrentPage = [self pageControlIndexWithCurrentCellIndex:collectionViewItemIndex];
+    self.pageControl.currentPage = pageControlCurrentPage;
 }
 @end
