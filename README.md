@@ -1,7 +1,7 @@
 # WCCycleScrollView
 iOS 循环滚动幻灯片
 
-#使用
+# 使用
 ```objc
     WCCycleScrollView *cycleView = [WCCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 100, width, 200) delegate:self placeholderImage:[UIImage imageNamed:@"h6"]];
     cycleView.delegate = self;
