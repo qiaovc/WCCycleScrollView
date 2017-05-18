@@ -74,4 +74,12 @@
  分页指示器颜色
  */
 @property(nonatomic, strong) UIColor *pageIndicatorTintColor;
+/**
+ 当前分页指示器图片
+ */
+@property(nonatomic, strong) UIImage *currentPageImage;
+/**
+ 分页指示器图片
+ */
+@property(nonatomic, strong) UIImage *pageImage;
 @end

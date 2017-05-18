@@ -77,12 +77,11 @@
         int targetIndex = _totalItemCount*0.5;
         [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
-    CGFloat width = [self.pageControl sizeForNumberOfPages:self.imageURLStringGroup.count].width;
+    CGFloat width = ([self.pageControl.subviews lastObject].frame.size.width + 10) * self.imageURLStringGroup.count;
     CGFloat height = 10.0;
     CGFloat x = self.mainView.frame.size.width - width - 10;
     CGFloat y = self.mainView.frame.size.height - height - 10;
     self.pageControl.frame = CGRectMake(x, y, width, 10);
-    
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -120,6 +119,18 @@
 {
     _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
     _pageControl.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
+}
+
+- (void)setCurrentPageImage:(UIImage *)currentPageImage
+{
+    _currentPageImage = currentPageImage;
+    [_pageControl setValue:currentPageImage forKeyPath:@"_currentPageImage"];
+}
+
+- (void)setPageImage:(UIImage *)pageImage
+{
+    _pageImage = pageImage;
+    [_pageControl setValue:pageImage forKeyPath:@"_pageImage"];
 }
 //MARK: - 自定义方法
 - (void)setupTimer
