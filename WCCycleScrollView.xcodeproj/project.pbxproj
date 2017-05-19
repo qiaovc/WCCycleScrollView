@@ -737,6 +737,7 @@
 				16D354921EC2FADF00DF9D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D354931EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -745,6 +746,7 @@
 				16D354951EC2FADF00DF9D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D354961EC2FADF00DF9D5A /* Build configuration list for PBXNativeTarget "WCCycleScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +755,7 @@
 				16D354981EC2FADF00DF9D5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

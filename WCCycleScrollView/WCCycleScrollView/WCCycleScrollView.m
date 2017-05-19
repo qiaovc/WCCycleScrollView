@@ -38,6 +38,8 @@
     _titleLabelTextFont = [UIFont systemFontOfSize:14];
     _titleLabelHeight = 30;
     _autoScrollTimeInterval = 3.0;
+    _pageControlAliment = WCCycleScrollViewPageControlAlimentCenter;
+    _imageViewContentMode = UIViewContentModeScaleToFill;
     
 }
 
@@ -77,11 +79,15 @@
         int targetIndex = _totalItemCount*0.5;
         [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
-    CGFloat width = ([self.pageControl.subviews lastObject].frame.size.width + 10) * self.imageURLStringGroup.count;
+//    CGFloat width = [self.pageControl.subviews lastObject].frame.size.width * self.imageURLStringGroup.count * 1.5;
+    CGSize size = [self.pageControl sizeForNumberOfPages:self.imageURLStringGroup.count];
     CGFloat height = 10.0;
-    CGFloat x = self.mainView.frame.size.width - width - 10;
+    CGFloat x = (self.mainView.frame.size.width - size.width) * 0.5;
     CGFloat y = self.mainView.frame.size.height - height - 10;
-    self.pageControl.frame = CGRectMake(x, y, width, 10);
+    if (self.pageControlAliment == WCCycleScrollViewPageControlAlimentRight) {
+        x = self.mainView.frame.size.width - size.width - 10;
+    }
+    self.pageControl.frame = CGRectMake(x, y, size.width, 10);
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -153,11 +159,15 @@
     }
     if (self.imageURLStringGroup.count == 0) return;
     
+    int indexOnPageControl = [self pageControlIndexWithCurrentCellIndex:[self currentIndex]];
+
     UIPageControl *pageControl = [[UIPageControl alloc] init];
     pageControl.numberOfPages = self.imageURLStringGroup.count;
     pageControl.hidesForSinglePage = YES;
+    pageControl.enabled = NO;
     pageControl.currentPageIndicatorTintColor = self.currentPageIndicatorTintColor;
     pageControl.pageIndicatorTintColor = self.pageIndicatorTintColor;
+    pageControl.currentPage = indexOnPageControl;
     [self addSubview:pageControl];
     _pageControl = pageControl;
     
@@ -223,6 +233,7 @@
         cell.titleLabelTextFont = self.titleLabelTextFont;
         cell.titleLabelBackgroundColor = self.titleLabelBackgroundColor;
         cell.titleLabelHeight = self.titleLabelHeight;
+        cell.imageView.contentMode = self.imageViewContentMode;
         cell.clipsToBounds = YES;
     }
     return cell;

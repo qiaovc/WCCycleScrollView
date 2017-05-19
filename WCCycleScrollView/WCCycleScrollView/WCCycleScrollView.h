@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    WCCycleScrollViewPageControlAlimentRight,
+    WCCycleScrollViewPageControlAlimentCenter
+} WCCycleScrollViewPageControlAliment;
+
+
 @class WCCycleScrollView;
 
 @protocol WCCycleScrollViewDelegate <NSObject>
@@ -67,6 +73,10 @@
 @property(nonatomic, assign) NSTextAlignment    titleLabelTextAlignment;
 @property(nonatomic, assign) CGFloat            titleLabelHeight;
 /**
+ 图片的contentmode
+ */
+@property(nonatomic, assign) UIViewContentMode imageViewContentMode;
+/**
  当前分页指示器颜色
  */
 @property(nonatomic, strong) UIColor *currentPageIndicatorTintColor;
@@ -82,4 +92,8 @@
  分页指示器图片
  */
 @property(nonatomic, strong) UIImage *pageImage;
+/**
+ 分页指示器位置
+ */
+@property(nonatomic, assign) WCCycleScrollViewPageControlAliment pageControlAliment;
 @end
