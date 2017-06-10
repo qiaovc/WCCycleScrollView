@@ -32,6 +32,7 @@
     [scrollview addSubview:cycleView];
     
 }
+
 - (void)cycleScrollView:(WCCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"%ld",(long)index);
@@ -39,11 +40,5 @@
     vc.view.backgroundColor = [UIColor brownColor];
     [self.navigationController pushViewController:vc animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
